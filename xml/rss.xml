@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0">
+	<channel>
+		<title>Más noticias sobre Global Goals</title>
+		<link>https://www.globalgoals.org/es</link>
+		<description>Noticias relacionadas con los Objetivos Mundiales</description>
+		<language>es</language>
+
+		<item>
+			<title>Samsung apoyando los Objetivos Mundiales</title>
+			<link>https://www.samsung.com/es/apps/samsung-global-goals/</link>
+			<description>Samsung apoya a través de los Samsung Services o duplicando las donaciones a través de su app</description>
+			<language>es</language>
+			<guid>https://www.samsung.com/es/apps/samsung-global-goals/</guid> <!--identificador de la noticia,normalmente el enlace-->
+		</item>
+
+		<item>
+		<title>Global Goals oficial</title>
+			<link>https://www.globalgoals.org/es</link>
+			<description>La autentica pagina e inspiración de esta</description>
+			<language>es</language>
+		</item>
+
+		<item>
+		<title>Global Goals internacional</title>
+			<link>https://www.globalgoals.org/</link>
+			<description>La versión internacional de la página Global Goals</description>
+			<language>en</language>
+		</item>
+
+		<item>
+			<title>El deporte puede cambiar el mundo</title>
+			<link>https://www.globalgoals.org/news/sport-for-development-and-peace</link>
+			<description>La importancia del deporte en los Global Goals en los Laureus World Sports Awards</description>
+			<language>en</language>
+		</item>
+
+
+	</channel>
+</rss>

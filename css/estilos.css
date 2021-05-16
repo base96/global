@@ -1,0 +1,1251 @@
+* 
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+}
+
+.negrita
+{
+	font-weight: bold;
+	text-align: center;
+}
+
+.centrar
+{
+	text-align: center;
+}
+
+.blanco
+{
+	color: #fff;
+}
+
+
+
+/*Pantalla de carga*/
+.pantallaCarga
+{
+	position: absolute;
+	top: 0;
+	/*background: #FAFAFA;*/
+	background-color: white;
+	color: #fff;
+	width: 100%;
+	height: 616px;
+	display: flex;
+	box-sizing: content-box;
+	/*border: 2px black solid;*/
+}
+
+.rotulo
+{
+	width: 900px;
+	height: 150px;
+	/*border: 4px black solid;*/
+	/*background-color: white;*/
+
+	position: relative;
+	top: 270px;
+	left: 65px;
+	/*margin: 280px 0px 0px 0px;*/
+	/*padding-left: 40px;*/
+
+	font-size: 45px;
+	color: black;
+	font-weight: bold;
+	font-family: Arial;
+}
+
+.imagenCarga
+{
+	position: relative;
+	top: 110px;
+	left: 185px; /*185px*/
+	/*margin: 65px -160px 0px 0px;*/
+	/*border: 4px black solid;*/
+	width: 900px;
+	height: 520px;
+}
+
+.imagenCarga img
+{
+	height: 80%;
+}
+
+.preloader
+{
+	margin: auto; /*al centro de la pagina*/
+
+	width: 275px; /*275px*/
+	height: 30px;
+	background: rgba(255,255,255,0.1);
+
+	position: relative;
+	left: -330px;
+	top: 17px;
+}
+
+.preloader:before /*pseudoelemento*/
+{ 
+	content: "";
+	position: absolute;
+	background: red;
+	width: 0px;
+	height: 30px;
+
+	animation: preloader 3s infinite; /*primer intento 7s*/
+}
+
+.preloader p
+{
+	margin: 0;
+	line-height: 30px;
+	font-size: 25px;
+	font-weight: bold;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%); /*centrarlo en la barra*/
+}
+
+.cerrar
+{
+	transform: translateY(-100%);
+	transition: all 0.5s;
+}
+
+@keyframes preloader 
+{ 
+	90%
+	{
+		width: 100%;
+		opacity: 1;
+	}
+	100%
+	{
+		width: 100%;
+		opacity: 0;
+	}
+}
+
+
+
+/*Pantalla de inicio*/
+.contenido
+{
+	height: 700px;
+	width: 84%;
+	/*border: 2px black solid;*/
+	/*background: url("../img/background.png") center no-repeat;*/
+	padding-left: 5%;
+	padding-right: 5%;
+	position: relative;
+}
+
+/*Menu de navegacion*/
+.barnavega
+{
+	width: 85%;
+	height: 110px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+}
+
+.logo
+{
+	width: 160px;
+	cursor: pointer; /*puntero de mano*/
+}
+
+.rss
+{
+	width: 40px;
+	cursor: pointer:;	
+}
+
+.apuntarse
+{
+	width: 40px;
+	cursor: pointer;	
+}
+
+.menu
+{
+	flex: 1;
+	padding-left: 60px;
+}
+
+.menu ul li{
+	display: inline-block;
+	list-style: none;
+	margin: 0px 20px;
+
+}
+
+.menu ul li a
+{
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+/*Colores segun el logo de Global Goals*/
+.goalsColor:hover
+{
+	background: #F9402A;	
+	border: 2px black solid;
+	padding: 10px 10px 10px 10px;
+}
+
+.novedadesColor:hover
+{
+	background: yellow;	
+	border: 2px black solid;
+	padding: 10px 10px 10px 10px;
+}
+
+.ultimoColor:hover
+{
+
+	background: #46C568;	
+	border: 2px black solid;
+	padding: 10px 10px 10px 10px;
+}
+
+.infoColor:hover
+{
+	background: orange;	
+	border: 2px black solid;
+	padding: 10px 10px 10px 10px;
+}
+
+/*Descripcion, lo describo con una carta*/
+.carta
+{
+	text-align: center;
+}
+
+.carta img
+{
+	border: 2px black solid;
+	height: 503px; 
+	width: 742px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS GOALS<-------------------------------------------------------------*/
+
+#infoMeta
+{
+	text-align: center;
+	font-family: Courier;
+}
+
+
+
+/*imagen que salga txt cuando hover */
+
+#imagen
+{
+	width: 500px;	
+	height: 500px;
+	margin: 0 auto; /*margin: 30px;*/
+	background: url('../img/nopoverty.jpg');
+
+}
+
+#info
+{
+	position: absolute;
+	overflow: hidden;
+	width: 500px;
+	height: 500px;
+	background: rgba(236, 166, 160, 0.9);
+	transition: opacity 0.2s;
+	opacity: 0;
+}
+
+#imagen:hover #info
+{
+	opacity: 1;
+	
+}
+
+p#titulo 
+{	
+	color: #FAED09;
+	position: absolute;
+	margin-top: 20px;
+	transition: margin 0.2s;
+	margin-left: -70px;
+	font-size: 28px;
+	text-align: center;	
+}
+
+#imagen:hover p#titulo
+{
+	margin-left: 70px;		
+}
+
+p#texto
+{
+	margin: 0 auto;
+	width: 425px;
+	text-align: center;
+	transition: margin 0.3s;
+	margin-top: 510px;
+	font-size: 24px;
+
+}
+
+#imagen:hover p#texto 
+{
+	margin-top: 70px;
+}
+
+
+p#texto img
+{
+	max-height: 310px;
+	max-width: 260px;
+
+}
+
+
+/*FIN imagen que salga txt cuando hover */
+
+
+/*Tabla*/
+.tablaMetas
+{
+	margin: 0 auto;
+}
+
+
+
+/*Efecto voltear*/
+.voltear
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	width: 500;
+	margin: 0 auto;
+	justify-content: center;
+}
+
+.tarjetaVolteada
+{
+	-webkit-perspective: 800;
+	perspective: 800;
+}
+
+.tarjeta
+{
+	width: 500px;
+	height: 270px;
+	background: #4b743c;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: .7s ease;
+	-webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+	-moz-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+	box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+}
+
+.adelante, .atras
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-backface-visibility: hidden; /*para Chrome*/
+	backface-visibility: hidden;
+}
+
+.adelante
+{
+	width: 100%;
+	background: url(../img/accion.jpg) no-repeat center;
+}
+
+.atras
+{
+	transform: rotateY(180deg);
+
+	padding: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	text-align: center;
+	color: #fff;
+}
+
+.tarjetaVolteada:hover .tarjeta
+{
+	transform: rotateY(180deg);
+}
+
+/*Fin Efecto voltear*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS NOVEDADES<-------------------------------------------------------------*/
+html
+{
+	scroll-behavior: smooth; /*scroll suave*/
+}
+
+
+section
+{
+	height: 650px;
+	display: flex;
+	justify-content: space-evenly; /*para que me rellene el espacio*/
+	padding: 20px 10px;
+	align-items: center;
+	text-align: center;
+}
+
+section h2
+{
+	font-size: 50px;
+	font-weight: 500; /*grosor*/
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+section p
+{
+	font-size: 20px;
+	font-weight: 500;
+	margin: 0px 30px 10px 0px;
+}
+
+section a
+{
+	display: inline-block; /*para que me deje darle propiedades de bloque: padding,...*/
+	padding: 7px 0px;
+	color: #283773;
+	text-decoration: none;
+	width: 200px;
+	text-align: center;
+	border: 1px white solid;
+	border-radius: 50px;
+	background: #fff;
+}
+
+section img
+{
+	height: 60%;
+}
+
+section p video
+{
+	width: 90%;
+	height: 50%;
+}
+
+#sec1
+{
+	background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+}
+
+#sec2
+{
+	background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+}
+
+#sec3
+{
+	background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS ULTIMO AÑO<-------------------------------------------------------------*/
+.ultimoAnioParrafo
+{
+	text-align: center;
+	color: #fff;
+	font-family:"Gill Sans Extrabold";
+	background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+}
+
+
+.david, .samsung
+{
+	border: 5px black solid;
+	margin-top: 15px;
+	margin: 0 auto;
+	height: 900px;
+	width: 750px;
+
+}
+
+/*La de David B*/
+
+.tituloNoticia
+{
+	margin: 0 auto;
+	border: 2px black solid;
+	height: 80px;
+	width: 749px;
+	background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+	color: #fff;
+	text-align: center;
+	padding-top: 30px;
+	float: left;
+}
+
+.fotoNoticia
+{
+	height: 488px;
+	width: 365px;
+	/*border: 3px pink solid;*/
+	float: left;
+}
+
+.textoNoticia
+{
+	/*border: 2px green solid;*/
+	height: 485px;
+	width: 365px;
+	float: left;
+	padding: 5px 5px 0px 5px;
+
+}
+
+.imagenAbajo
+{
+	/*border: 2px red solid;*/
+	float: left;
+	text-align: center;
+	background: #F4F0F0;
+	width: 749px;
+}
+
+
+
+/*Samsung*/
+.tituloSamsung
+{
+	margin: 0 auto;
+	border: 2px black solid;
+	height: 80px;
+	width: 749px;
+	background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+	color: #fff;
+	text-align: center;
+	padding-top: 30px;
+	float: left;
+}
+
+.fotoSamsung
+{
+	height: 488px;
+	width: 365px;
+	/*border: 3px pink solid;*/
+	float: left;
+}
+
+.textoSamsung
+{
+	/*border: 2px green solid;*/
+	height: 485px;
+	width: 325px;
+	float: left;
+	padding: 5px 5px 0px 5px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS ACERCADE/INFOPERSONAL<-------------------------------------------------------------*/
+.infoPersonal
+{
+	/*border: 2px black solid;*/
+	width: 850px;
+	height: 1050px;
+	margin: 0 auto;
+
+}
+
+#foto {
+	background: url('../img/lego.png') center no-repeat ;
+	height: 300px ;
+	width: 150px ;
+	float: right;
+	/*border: 3px green solid;*/
+}
+
+.tablaDatos
+{
+	margin: 0 auto;
+	float: left;
+	font-size: 25px;
+	width: 690px;
+	height: 290px;
+
+}
+
+.tituloInfo
+{
+	text-align: center;
+	background: #f871f1;
+}
+
+.amarillo
+{
+	background: #f9c93a;
+}
+
+.azul
+{
+	background: #55b3ef;
+}
+
+.capacidades
+{
+	height: 230px ; 
+	width:	845px ;
+	float: left;
+	/*border: 2px blue solid*/
+
+}
+
+.FORTALEZAS
+{
+	background: green;
+	display: block;
+	background: #CEFF00 ;
+	margin-top: 15px ;
+	font-family: tahoma ;
+	font-size: 18px ; 
+	border-radius: 20px 20px 20px 20px ;
+	padding-left: 20px;
+	box-shadow: 5px 0px 10px #939393 ;
+	width: 380px;
+	float: left;
+}
+
+.fuerte li
+{
+	background: lightgreen;
+	display: block;
+	margin-top: 15px ;
+	font-family: tahoma ;
+	font-size: 18px ; 
+	border-radius: 20px 20px 20px 20px ;
+	padding-left: 20px;
+	box-shadow: 5px 0px 10px #939393 ;
+}
+
+
+.DEBILIDADES
+{
+	background: #FE0101;
+	display: block;
+	margin-top: 15px ;
+	font-family: tahoma ;
+	font-size: 18px ; 
+	border-radius: 20px 20px 20px 20px ;
+	padding-left: 20px;
+	box-shadow: 5px 0px 10px #939393 ;
+	float: right;
+	width: 380px;
+}
+
+
+.debil li
+{
+	background: #F88B8B;
+	display: block;
+	margin-top: 15px ;
+	font-family: tahoma ;
+	font-size: 18px ; 
+	border-radius: 20px 20px 20px 20px ;
+	padding-left: 20px;
+	box-shadow: 5px 0px 10px #939393 ;
+}
+
+
+.mapa 
+{
+	/*background: green;*/
+	height: 400px; 
+	width: 840px;
+	float: left;
+	text-align: center;
+	border: 6px pink solid;
+}
+
+.vantigua
+{
+	text-align: center;
+}
+
+.vantigua a
+{
+	text-decoration: none;
+	font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS FORMULARIO<-------------------------------------------------------------*/
+.caja
+{
+	background: url('../img/fondoFormulario.jpg') no-repeat center;
+	border: 5px #F8CA6F solid;
+	height: 630px;
+	width: 590px;
+	margin: 0 auto;
+	font-family: 'Open Sans';
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.cabeza
+{
+	background-color: #F5E2A9;
+	border-bottom: 6px #F64016 solid; 
+	font-size: 15px;
+	padding: 20px 40px;
+	text-align: center;
+}
+
+.cabeza h2
+{
+	margin: 0;
+}
+
+.form
+{
+	padding: 30px 40px;
+}
+
+.control
+{
+	margin: 15px 20px 5px 60px;
+	padding-bottom: 22px;
+	position: relative;
+	color: #fff;
+	font-weight: bold;
+}
+
+.control.primero
+{
+	height: 50px;
+	width: 78%;
+	/*border: 3px black solid;*/
+}
+
+.control.primero input
+{
+	height: 50px;
+	width: 50%;
+	border: 3px #FD51BD solid;
+	position: relative;
+	float: left;
+}
+
+.etiquetaEdad
+{
+	position: relative;
+	top: -15px;
+}
+
+#edad
+{
+	position: relative;
+	top: -18px;
+}
+
+.control label
+{
+	color: #fff;
+	/*margin-bottom: 5px;*/
+}
+
+.control input
+{
+	border: 3px #FD51BD solid;
+	border-radius: 22px;
+	display: block;
+	font-size: 14px;
+	padding: 10px;
+	width: 90%;
+}
+
+.fieldCumplidos
+{
+	width: 76%;
+	margin: 8px 0px 5px 50px;
+	padding: 5px 0px 5px 12px;
+
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+#mybutton
+{
+	background-color: #BA9627;
+	border: 3px black solid;
+	border-radius: 4px; 
+	color: #fff;
+	display: block;
+	font-size: 16px;
+	padding: 10px;
+	width: 70%;
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Animaciones*/
+/*pantalla de carga*/
+@keyframes preloader 
+{ 
+	90%
+	{
+		width: 100%;
+		opacity: 1;
+	}
+	100%
+	{
+		width: 100%;
+		opacity: 0;
+	}
+}
+/*   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Diseño adaptable y responsable*/
+/*Mozilla probado ctrl+shift+M --> 1150 | 900 | 600
+/*
+Mis puntos de ruptura son:
+- <1000px: pantalla tablet
+- <600px: pantalla movil
+*/
+
+/*Tablet*/
+@media screen and (max-width: 1000px)
+{
+	/*Pantalla de carga*/
+	.imagenCarga, .preloader p
+	{
+		flex-direction: column-reverse;
+	}
+	.imagenCarga > img
+	{
+		height: 50%;
+		position: relative;
+		top: 30px;
+		left: -55px;
+	}
+	.rotulo{
+		position: relative;
+		top: 140px;
+	}
+	.preloader
+	{
+		visibility: hidden;
+	}
+
+
+
+	/*Adaptación del menú*/
+	.logo
+	{
+		height: 70%;
+		width: 150px;
+		/*border: 2px black solid;*/
+	}
+	.barnavega
+	{
+		height: 110px;
+		width: 750px;
+		font-size: 13px;
+	}
+
+
+	/*Novedades*/
+	section
+	{
+		flex-direction: column-reverse; /*me pone la imagen arriba del texto, que me tome el eje X!!*/
+		/*justify-content:center;*/
+	}
+	section > p > img
+	{
+		height: 90%;
+	}
+	section > p > video
+	{
+		height: 100%;
+	}
+	.infoArbol
+	{
+		text-align: center;
+	}
+
+
+
+
+
+}
+
+
+
+
+
+
+/*Movil*/
+@media (max-width: 600px)
+{
+	/*Pantalla de carga*/
+	.imagenCarga > img
+	{
+		height: 45%;
+		position: relative;
+		top: 185px;
+		left: -260px;
+	}
+	.preloader p
+	{
+		visibility: hidden;
+	}
+	.rotulo
+	{
+		top: 20px;
+		left: 160px;
+		text-align: center;
+	}
+
+	/*Pantalla de inicio*/
+	.carta img
+	{
+		width: 94%;
+	}
+
+
+	/*Adaptación del menú*/
+	.logo
+	{
+		height: 70%;
+		width: 150px;
+		/*border: 2px black solid;*/
+	}
+	.barnavega
+	{
+		height: 100px;
+		width: 450px; /*<-- DISPOSICION DE LA LISTA*/
+		font-size: 15px; 
+		/*border: 2px black solid;*/
+	}
+
+
+	/*Novedades*/
+	section > p > img
+	{
+		height: 70%;
+		padding: 10px 0px 0px 0px;
+	}
+
+	section div h2
+	{
+		font-size: 30px;
+		padding-top: 10px;
+	}
+
+
+	/*Ultimo Anio*/
+	.david, .samsung
+	{
+		height: 650px;
+		width: 580px;
+	}
+
+	.tituloNoticia, .tituloSamsung
+	{
+		text-align: center;
+		width: 100%;
+	}
+
+
+	.fotoNoticia, .fotoSamsung
+	{
+		visibility: hidden;
+		width: 1%;
+		height: 1%;
+	}
+
+	.textoNoticia, .textoSamsung
+	{
+		text-align: center;
+		width: 95%;
+		height: 40%;
+		/*border: 2px black solid;*/
+	}
+
+	.imagenAbajo
+	{
+		width: 95%;
+		height: 30%;
+		margin: 0 auto;
+	}
+
+	.imagenAbajo img
+	 {
+	 	width: 100%;
+	 	height: 100%;
+	 	text-align: center;
+	 	float: left;
+	 	padding: 10px 0px 0px 10px;
+	 }
+
+
+
+	 /*InfoPersonal*/
+	 .infoPersonal
+	 {
+	 	width: 580px;
+	 }
+
+	.tablaDatos
+	 {
+	 	font-size: 20;
+		width: 425px;
+		height: 200px;
+	}
+
+	#foto
+	{
+		height: 200px;
+		width: 100px;
+	}
+
+	.capacidades
+	{
+		/*border: 4px blue solid;*/
+		width: 400px;
+		height: 420px;
+	}
+
+	.mapa
+	{
+		width: 590px;
+		border: 4px white solid;	
+	}
+
+	iframe
+	{
+		height: 300px; 
+		width: 540px; 
+		text-align: center;
+	}
+
+
+}	

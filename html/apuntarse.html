@@ -1,0 +1,93 @@
+<html>
+
+<head>
+	<title>Goals / Apuntarse</title>
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+	<script type="text/javascript" src="../js/javascript.js"></script>
+</head>
+
+<body>
+	<!-- Barra de menú -->
+	<div class="barnavega">
+		<a href="../index.html"><img src="../img/ggInicio.png" class="logo"></a>
+		<div class="menu">
+			<ul>
+				<li class="goalsColor"><a href="goals.html">GOALS</a></li>
+				<li class="novedadesColor"><a href="novedades.html">NOVEDADES</a></li>
+				<li class="ultimoColor"><a href="ultimoAnio.html">&Uacute;LTIMO A&Ntilde;O</a></li>
+				<li class="infoColor"><a href="infoPersonal.html">¿QUI&Eacute;N SOY?</a></li>
+			</ul>
+		</div>		
+		<a href="../xml/rss.xml"><img src="../img/rss.png" class="rss"></a>
+		<a href="apuntarse.html"><img src="../img/apuntarte.png" class="apuntarse"></a>	
+	</div>
+
+
+	<!--Contenido Formulario-->
+	<div class="caja">
+		<div class="cabeza">
+			<h2>PARTICIPAR CON LOS OBJETIVOS GLOBALES</h2>
+		</div>
+		
+		<form id="form" name="compru" action="../php/formulario.php" method="post">
+			<div class="control primero">
+				<label>Usuario</label>
+				<p>
+					<input type="text" name="usuario" placeholder="Dime tu usuario" size="24px">
+				</p>
+				<p>
+					<label class="etiquetaEdad">Edad</label>
+					<input type="text" name="edad" id="edad" placeholder="Tu edad es..." size="24px">
+				</p>
+			</div>
+
+
+
+			<div class="control">
+				<p>
+					<label>Correo electr&oacute;nico</label>
+					<input type="email" id="email" placeholder="Escribe tu correo" name="email" size="50px">
+				</p>
+			</div>
+
+
+
+			<div class="control">
+				<p>
+					<label>Contrase&ntilde;a</label>
+					<input type="password" name="pass1" id="pass1" placeholder="Escribe tu contrase&ntilde;a" size="50px">
+				</p>
+			</div>
+
+
+
+			<div class="control">
+				<p>
+					<label>Repetir contrase&ntilde;a</label>
+					<input type="password" name="pass2" id="pass2" placeholder="Repite la contrase&ntilde;a" size="50px">
+				</p>
+			</div>
+
+
+
+			<div>			
+				<label class="control">¿Qu&eacute; objetivos cumples?</label>
+					<fieldset class="fieldCumplidos">
+						<p><input type="checkbox" name="acciones[]" value="Reciclar" checked="checked" />Reciclar</p>
+						<p><input type="checkbox" name="acciones[]" value="Ahorrar energia" />Ahorrar energ&iacute;a</p>
+						<p><input type="checkbox" name="acciones[]" value="No tirar comida" />No tirar comida</p>
+						<p><input type="checkbox" name="acciones[]" value="No desperdiciar agua" />No desperdiciar agua</p>
+					</fieldset>	
+			</div>
+
+
+
+			<p><input type="button" id="mybutton" value="Enviar esta informacion" onClick="validar()"></p>
+
+		</form>
+	</div>
+
+	<br/>
+
+</body>
+</html>
